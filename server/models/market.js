@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Market.belongsToMany(models.User, {through: "UserMarkets"})
+        Market.belongsTo(models.User)
       }
     }
   });

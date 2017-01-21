@@ -16,6 +16,12 @@ module.exports = function(sequelize, DataTypes) {
     }, 
     zip: {
       type: DataTypes.INTEGER
+    },
+    lng: {
+      type: DataTypes.INTEGER
+    },
+    lat:{
+      type:DataTypes.INTEGER
     }
   });
   return Location;
