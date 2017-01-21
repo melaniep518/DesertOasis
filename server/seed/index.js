@@ -11,4 +11,10 @@ models.User.bulkCreate([
   {location: "Home", street: "1925 Glenwood Road, Apt. 4A", city: "Brooklyn", state: "NY", zip: 11230, UserId: 2},
   {location: "Work", street: "1470 Madison Avenue", city: "New York", state: "NY", zip: 10029, UserId: 2}
 ]))
+.then(data => models.Market.bulkCreate([
+    {name: "Boro Park Greenmarket", UserId: 2},
+    {name: "Brownsville Community Farmers' Market", UserId: 2},
+    {name: "Bushwick Farmers' Market I", UserId: 3},
+
+  ]))
 .catch(error => console.log(error))
