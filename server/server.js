@@ -16,6 +16,6 @@ app.get('/*', function(req, res) {
 })
 
 db.sequelize.sync().then(function() {
-	console.log('successful')
+	console.log('Server Is Running On http://localhost:3000')
   app.listen(3000)
 })
