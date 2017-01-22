@@ -8,7 +8,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 //Import Components
 import AppContainer from './AppContainer';
 import Welcome from './welcome/Welcome';
-import Search from './search/Search';
+import Homepage from './homepage/Homepage';
 
 
 //Build Router Component
@@ -16,7 +16,7 @@ const router = (
 	<Router history={browserHistory}>
 		<Route path="/" component={AppContainer}>
 			<IndexRoute component={Welcome} />
-			<Route path="/search" component={Search} />
+			<Route path="/homepage" component={Homepage} />
 		</Route>
 	</Router>
 );

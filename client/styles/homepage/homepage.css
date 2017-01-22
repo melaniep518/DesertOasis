@@ -1,0 +1,65 @@
+/* 
+############################
+####### HOMEPAGE.js ######## 
+############################
+*/
+
+.homepage-container {
+	background-color: purple;
+	display: flex;
+	flex-direction: column;
+	width: 700px;
+	height: auto;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.greeting-container {
+	display: flex;
+	flex-direction: row;
+	background-color: blue;
+	width: 100%;
+	height: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.greeting-photo {
+	width: 200px;
+	border: solid;
+	border-width: 2px;
+	border-color: black;
+	padding: 5px 5px;
+}
+
+.greeting-message {
+	width: 500px;
+	border: solid;
+	border-width: 2px;
+	border-color: black;
+	padding: 5px 5px;
+}
+
+.treasure-chest-container {
+	background-color: green;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
