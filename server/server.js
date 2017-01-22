@@ -14,7 +14,7 @@ app.use(express.static('public'))
 
 app.use('/api' , indexRouter.User)
 app.use('/api' , indexRouter.Location)
-// app.use('/api' , indexRouter.Market)
+app.use('/api/market' , indexRouter.Market)
 // join tables how does this work 
 
 app.get('/*', function(req, res) {
