@@ -28,7 +28,7 @@ const Login = React.createClass({
 				<div className="login-inputs-container">
 					<p>
 						<input type="text" 
-							placeholder="User Id" 
+							placeholder="USERNAME" 
 							onChange={this.handleChange.bind(this, "username")}>
 						</input>
 					</p>
@@ -36,12 +36,11 @@ const Login = React.createClass({
 				<div className="login-inputs-container">	
 					<p>
 						<input type="password" 
-							placeholder="Password" 
+							placeholder="PASSWORD" 
 							onChange={this.handleChange.bind(this, "password")}>
 						</input>
 					</p>
 				</div>
-
 				<div className="login-button-container">
 					<Link to={`/homepage/${this.state.username}`}><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 					  LOGIN

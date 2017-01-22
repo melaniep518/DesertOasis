@@ -14,6 +14,7 @@ const Search = React.createClass({
 	getInitialState() {
 		return(
 			{
+				firstName: "",
 				savedMarkets: [],
 				marketName: "",
 				marketAddress: "",
@@ -30,12 +31,22 @@ const Search = React.createClass({
 		})
 			.done((data) => {
 				console.log(data);
-				that.setState({ savedMarkets: data.Markets, })
+				that.setState({ savedMarkets: data.Markets, firstName: data.first_name, })
 			})
 	},
 	render() {
 		return(
 			<div>
+			<ol>
+				{this.state.savedMarkets.map(function (market) {
+					return(
+					<li key={market.id}>
+						<br />
+						<p><strong>{market.name}</strong></p>
+					</li>
+					)
+				})}
+			</ol>
 				<div className="homepage-container">
 					
 					<div className="greeting-container">
@@ -43,7 +54,7 @@ const Search = React.createClass({
 							PHOTO GOES HERE
 						</div>
 						<div className="greeting-message">
-							Welcome, User!
+							Welcome, {this.state.firstName}!
 						</div>
 					</div>
 

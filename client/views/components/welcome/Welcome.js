@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 //IMPORT COMPONENTS
 import Login from './Login';
+import SnapBudgetChart from '../homepage/SnapBudgetChart';
 
 //IMPORT CSS
 import '../../../styles/welcome/welcome.css';
@@ -13,6 +14,7 @@ const Welcome = React.createClass({
 	render() {
 		return(
 			<div>
+			<SnapBudgetChart />
 				<div className="welcome-container">	
 					<div className="content-container">
 						

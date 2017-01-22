@@ -32,7 +32,8 @@ function getUserByUsername(req, res) {
 	models.User.findOne({
 		where: {
 			user_name: req.params.userName
-		}
+		},
+		include: [models.Market]
 	})
 	.then(function(user) {
 		console.log('USER: ===>', user)
