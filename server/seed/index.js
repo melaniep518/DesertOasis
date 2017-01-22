@@ -17,4 +17,9 @@ models.User.bulkCreate([
     {name: "Bushwick Farmers' Market I", UserId: 3},
 
   ]))
+  .then(data => models.TreasureChest.bulkCreate([
+      {snapBudget: 200, cashBudget: 150, snapSpent: 75, cashSpent: 50, UserId: 1},    
+      {snapBudget: 300, cashBudget: 250, snapSpent: 95, cashSpent: 100, UserId: 2},    
+      {snapBudget: 250, cashBudget: 250, snapSpent: 85, cashSpent: 110, UserId: 3}    
+    ]))
 .catch(error => console.log(error))

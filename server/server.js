@@ -15,6 +15,7 @@ app.use(express.static('public'))
 app.use('/api' , indexRouter.User)
 app.use('/api' , indexRouter.Location)
 app.use('/api/market' , indexRouter.Market)
+app.use('/api/' , indexRouter.TreasureChest)
 // join tables how does this work 
 
 app.get('/*', function(req, res) {
