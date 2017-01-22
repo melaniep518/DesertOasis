@@ -1,11 +1,11 @@
 import React from 'react';
+import MiniMap from './miniMap.js'
+import MarketInfo from './marketInfo.js'
 
 const IndividualMarket = React.createClass({
 	render() {
 		return(
 			<div>
-				<p>Hello from: <strong>{this.props.marketName}</strong></p>
-				<p>Located at: <strong>{this.props.marketAddress}</strong></p>
 			</div>
 		)
 	}

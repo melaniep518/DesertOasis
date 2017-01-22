@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import $ from 'jquery';
 
 //IMPORT COMPONENTS 
-import IndividualMarket from './IndividualMarket';
+import MarketContainer from '../marketContainer/marketContainer.js';
 
 //IMPORT CSS
 import '../../../styles/homepage/homepage.css';
@@ -21,6 +21,7 @@ const Search = React.createClass({
 			}
 		)
 	},
+
 	componentDidMount() {
 		console.log('COMPONENT ABOUT TO MOUNT')
 		console.log('PARAMS: ' + this.props.params.id)
@@ -84,7 +85,8 @@ const Search = React.createClass({
 
 					<div className="watering-holes-container">
 						<div className="watering-holes-title-container">
-							YOUR WATERING HOLES
+							YOUR OASIS
+							<MarketContainer user={this.props.params.id} />
 						</div>
 						<div className="watering-holes-individual-container">
 							

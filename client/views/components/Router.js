@@ -17,6 +17,7 @@ const router = (
 		<Route path="/" component={AppContainer}>
 			<IndexRoute component={Welcome} />
 			<Route path="/homepage/:id" component={Homepage} />
+
 		</Route>
 	</Router>
 );
