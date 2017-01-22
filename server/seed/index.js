@@ -12,9 +12,9 @@ models.User.bulkCreate([
   {location: "Work", street: "1470 Madison Avenue", city: "New York", state: "NY", zip: 10029, UserId: 2}
 ]))
 .then(data => models.Market.bulkCreate([
-    {name: "Boro Park Greenmarket", UserId: 2},
-    {name: "Brownsville Community Farmers' Market", UserId: 2},
-    {name: "Bushwick Farmers' Market I", UserId: 3},
+    {name: "Boro Park Greenmarket", lat: 40.730610, lng: -73.935242, UserId: 2},
+    {name: "Brownsville Community Farmers' Market", lat: 40.630610, lng: -73.873787, UserId: 2},
+    {name: "Bushwick Farmers' Market I", lat: 40.830610, lng: -73.956184, UserId: 3},
 
   ]))
   .then(data => models.TreasureChest.bulkCreate([

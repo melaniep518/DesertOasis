@@ -1,20 +1,20 @@
 {
   "development": {
-    "username": "Rabiya",
+    "username": "melaniewilliams",
     "password": null,
     "database": "desert-oasis",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "Rabiya",
-    "password": null,
+    "username": "melaniewilliams",
+    "password": null, 
     "database": "desert-oasis",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "Rabiya",
+    "username": "melaniewilliams",
     "password": null,
     "database": "desert-oasis",
     "host": "127.0.0.1",
