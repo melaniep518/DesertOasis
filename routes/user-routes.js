@@ -28,6 +28,18 @@ const getUser = (req,res) => {
 	.catch(error => res.status(500).send(error))
 }
 
+function getUserByUsername(req, res) {
+	models.User.findOne({
+		where: {
+			user_name: req.params.userName
+		}
+	})
+	.then(function(user) {
+		console.log('USER: ===>', user)
+		res.send(user)
+	})
+}
+
 ////////////////
 /////ROUTES/////
 ////////////////
@@ -35,6 +47,8 @@ router.route('/user')
 	.post(addUser)
 router.route('/user/:userId')
 	.get(getUser)
+router.route('/user/username/:userName')
+	.get(getUserByUsername)
 ////////////////
 ///EXPORTS//////
 ////////////////
