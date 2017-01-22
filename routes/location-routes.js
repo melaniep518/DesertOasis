@@ -7,13 +7,9 @@ const models = require('../server/models')
 ////////////////
 const findLocation = (req,res) => {
 	models.User.findById(req.params.userId)
-	.then(user => {
-		console.log(user)
-		models.Location.findAll({
-		where:{
-			UserId:user.dataValues.id
-		}
-	})})
+	.then(data => {
+		return models.Location.findAll()
+	})
 	.then(data => res.send(data))
 	.catch(error => res.status(500).send(error))
 }
@@ -30,17 +26,25 @@ const addLocation = (req,res) => {
 	.catch(error => res.status(500).send(error))
 }
 
-// const latLng = (req,res) => {
-// 	models.Location.find
-// 	})
-// }
+const latLng = (req,res) => {
+		models.Location.update({
+			lat:req.body.lat,
+			lng:req.body.lng
+		}, {
+			where:{
+				UserId:req.params.userId
+			}
+		})
+	.then(data => res.send(data))
+	.catch(error => res.send(error))
+}
 ////////////////
 /////ROUTES/////
 ////////////////
 router.route('/location/:userId')
 	.get(findLocation)
 	.post(addLocation)
-	// .put(latLng)
+	.put(latLng)
 ////////////////
 ///EXPORTS//////
 ////////////////
