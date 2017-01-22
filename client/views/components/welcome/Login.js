@@ -1,5 +1,6 @@
 //IMPORT MODULES
 import React from 'react';
+import { Link } from 'react-router';
 
 //IMPORT CSS
 import '../../../styles/welcome/login.css';
@@ -9,14 +10,14 @@ const Login = React.createClass({
 	getInitialState() {
 		return(
 		{
-			userid: "",
+			username: "",
 			password: ""
 		}
 		)
 	},
 	handleChange(input, event) {
-		if (input === "userid") {
-			this.setState({ userid: event.currentTarget.value })
+		if (input === "username") {
+			this.setState({ username: event.currentTarget.value })
 		} else if (input === "password") {
 			this.setState({ password: event.currentTarget.value })
 		}
@@ -28,7 +29,7 @@ const Login = React.createClass({
 					<p>
 						<input type="text" 
 							placeholder="User Id" 
-							onChange={this.handleChange.bind(this, "userid")}>
+							onChange={this.handleChange.bind(this, "username")}>
 						</input>
 					</p>
 				</div>
@@ -42,9 +43,9 @@ const Login = React.createClass({
 				</div>
 
 				<div className="login-button-container">
-					<button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					<Link to={`/homepage/${this.state.username}`}><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 					  LOGIN
-					</button>
+					</button></Link>
 				</div>
 
 			</div>

@@ -1,6 +1,7 @@
 //IMPORT MODULES
 import React from 'react';
 import { Link } from 'react-router';
+import $ from 'jquery';
 
 //IMPORT COMPONENTS 
 import IndividualMarket from './IndividualMarket';
@@ -18,6 +19,19 @@ const Search = React.createClass({
 				marketAddress: "",
 			}
 		)
+	},
+	componentDidMount() {
+		console.log('COMPONENT ABOUT TO MOUNT')
+		console.log('PARAMS: ' + this.props.params.id)
+		var that = this;
+		$.ajax({
+			url: `/api/user/username/${this.props.params.id}`,
+			method: 'GET'
+		})
+			.done((data) => {
+				console.log(data);
+				that.setState({ savedMarkets: data.Markets, })
+			})
 	},
 	render() {
 		return(
