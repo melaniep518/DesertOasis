@@ -1,6 +1,8 @@
 # DesertOasis
 
-Desert Oasis is a web app that aims to connect New Yorkers living in food deserts to farmer's markets accepting EBT benefits. The app also features a budget management tool to help users set and abide by cash and SNAP budgets.
+Desert Oasis was built during a weekend long hackathon hosted by [Coalition for Queens](http://www.c4q.nyc/). The theme of the hackathon was *'access' challenges within specific communities*, and participants were tasked with the mission of identifying a population that faces barriers accessing a critical resource, and building a web app that will solve this issue. 
+
+Our solution to this challenge is Desert Oasis, a web app that aims to connect New Yorkers living in food deserts to farmer's markets accepting EBT benefits. The app also features a budget management tool to help users set and abide by cash and SNAP budgets.
 
 Once users login to their personal dashboard with their username and password, they can:
 * View their current SNAP and cash budgets, or create new ones
