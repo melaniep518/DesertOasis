@@ -3,16 +3,16 @@
 module.exports = function(sequelize, DataTypes) {
   let TreasureChest = sequelize.define("TreasureChest", {
     snapBudget: {
-      type: DataTypes.INTEGER
+      type: DataTypes.FLOAT
     },
     cashBudget: {
-      type: DataTypes.INTEGER
+      type: DataTypes.FLOAT
     },
     snapSpent: {
-      type: DataTypes.INTEGER
+      type: DataTypes.FLOAT
     },
     cashSpent: {
-      type: DataTypes.INTEGER
+      type: DataTypes.FLOAT
     }
   }, {
     classMethods: {

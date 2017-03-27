@@ -18,10 +18,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER
     },
     lng: {
-      type: DataTypes.FLOAT
+      type: DataTypes.BIGINT
     },
     lat:{
-      type:DataTypes.FLOAT
+      type:DataTypes.BIGINT
     }
   });
   return Location;
