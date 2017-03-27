@@ -19,6 +19,7 @@ $ npm install -g webpack
 ```
 
 To run the web app:
+
 Clone this repository, then:
 ```sh
 cd DesertOasis
